@@ -13,6 +13,16 @@ final class NewsAppTests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
+    
+    func testTimeAgoSinceDate() {
+           let globalFunctions = GlobalFunctions.shared
+
+           // Test with a date string
+           let dateString = "2023-09-14T15:30:00Z"
+           let timeAgo = globalFunctions.timeAgoSinceDate(dateString: dateString)
+           XCTAssertEqual(timeAgo, "2 days ago")
+
+       } 
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.

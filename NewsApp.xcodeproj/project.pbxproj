@@ -25,8 +25,6 @@
 		A3ACA4EC2AB049F2007763AF /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ACA4EB2AB049F2007763AF /* NewsAppUITests.swift */; };
 		A3ACA4EE2AB049F2007763AF /* NewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ACA4ED2AB049F2007763AF /* NewsAppUITestsLaunchTests.swift */; };
 		A3D8F6C82AB50B3C0035F63B /* FilterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D8F6C72AB50B3C0035F63B /* FilterList.swift */; };
-		A3D8F6CB2AB50C5C0035F63B /* TVCFilterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D8F6C92AB50C5C0035F63B /* TVCFilterListCell.swift */; };
-		A3D8F6CC2AB50C5C0035F63B /* TVCFilterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3D8F6CA2AB50C5C0035F63B /* TVCFilterListCell.xib */; };
 		A3E2775F2AB2ED1C00602E82 /* VCHomeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2775D2AB2ED1C00602E82 /* VCHomeDetail.swift */; };
 		A3E277602AB2ED1C00602E82 /* VCHomeDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E2775E2AB2ED1C00602E82 /* VCHomeDetail.xib */; };
 /* End PBXBuildFile section */
@@ -74,8 +72,6 @@
 		A3ACA4EB2AB049F2007763AF /* NewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITests.swift; sourceTree = "<group>"; };
 		A3ACA4ED2AB049F2007763AF /* NewsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A3D8F6C72AB50B3C0035F63B /* FilterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterList.swift; sourceTree = "<group>"; };
-		A3D8F6C92AB50C5C0035F63B /* TVCFilterListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCFilterListCell.swift; sourceTree = "<group>"; };
-		A3D8F6CA2AB50C5C0035F63B /* TVCFilterListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVCFilterListCell.xib; sourceTree = "<group>"; };
 		A3E2775D2AB2ED1C00602E82 /* VCHomeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCHomeDetail.swift; sourceTree = "<group>"; };
 		A3E2775E2AB2ED1C00602E82 /* VCHomeDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VCHomeDetail.xib; sourceTree = "<group>"; };
 		DA7CD78E0CF2962C2643E29A /* Pods_NewsApp_NewsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp_NewsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,8 +166,6 @@
 			children = (
 				A37AE6332AB260AA00203451 /* TVCHomeCell.swift */,
 				A37AE6342AB260AA00203451 /* TVCHomeCell.xib */,
-				A3D8F6C92AB50C5C0035F63B /* TVCFilterListCell.swift */,
-				A3D8F6CA2AB50C5C0035F63B /* TVCFilterListCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -359,7 +353,6 @@
 				A37AE62F2AB24BA700203451 /* VCHome.xib in Resources */,
 				A37AE6362AB260AA00203451 /* TVCHomeCell.xib in Resources */,
 				A3ACA4D42AB049F2007763AF /* Assets.xcassets in Resources */,
-				A3D8F6CC2AB50C5C0035F63B /* TVCFilterListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +483,6 @@
 				A359C2C92AB16DB9001749EF /* Extensions+UIView.swift in Sources */,
 				A37AE6322AB258D700203451 /* Webservice.swift in Sources */,
 				A3E2775F2AB2ED1C00602E82 /* VCHomeDetail.swift in Sources */,
-				A3D8F6CB2AB50C5C0035F63B /* TVCFilterListCell.swift in Sources */,
 				A37AE6352AB260AA00203451 /* TVCHomeCell.swift in Sources */,
 				A37AE62E2AB24BA700203451 /* VCHome.swift in Sources */,
 				A3D8F6C82AB50B3C0035F63B /* FilterList.swift in Sources */,
@@ -671,8 +663,8 @@
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -700,8 +692,8 @@
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

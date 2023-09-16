@@ -74,6 +74,47 @@ The NewsApp uses the following dependencies:
 
 - SDWebImage: For asynchronous image loading and caching.
 
+
+## Testing
+
+### Unit Testing
+
+#### XCTest Framework
+
+### Functional Testing
+
+#### XCUITest Framework
+
+- **Purpose**: Functional testing involves testing the app's user interface (UI) and the interactions users have with it. The XCUITest framework is utilized for functional testing in the NewsApp.
+
+- **Usage**:
+  - Functional tests are written to simulate user interactions with the app, such as tapping buttons, scrolling, and navigating between screens.
+  - These tests validate that the app's features work correctly together, ensuring a smooth user experience.
+  - Functional testing covers scenarios from launching the app to performing specific actions and verifying outcomes.
+
+
+## Classes and Usage
+
+The existing classes and usage described in the README remain applicable to the testing context. Unit tests can be added to test individual components, while functional tests (XCUITests) can be used to validate the app's behavior from a user's perspective.
+
+## Getting Started with Testing
+
+To run unit and functional tests for NewsApp, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Open the Xcode project file (`NewsApp.xcodeproj`).
+3. Configure and run unit tests using the XCTest framework for specific components and functions.
+4. Set up and execute functional tests using the XCUITest framework to simulate user interactions.
+5. Consider integrating a CI/CD pipeline to automate testing upon code changes.
+
+## Dependencies
+
+The NewsApp uses the following testing dependencies:
+
+- XCTest: For writing and executing unit tests.
+- XCUITest: For writing and executing functional tests.
+
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

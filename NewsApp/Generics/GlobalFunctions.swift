@@ -14,7 +14,7 @@ class GlobalFunctions {
     // Private initializer to prevent external instantiation
     private init() {}
 
-    let apiKey = "&apiKey=868e8e63724746a3820e0dce4eff8622"//925aafe06f494e4fb67bff42f398000e
+    let apiKey = "&apiKey=9b7d064d4761450a8f75cd623b457381"
     let baseUrl = "https://newsapi.org/v2/top-headlines?"
 
 
@@ -26,9 +26,15 @@ class GlobalFunctions {
         if let date = dateFormatter.date(from: dateString) {
             let calendar = Calendar.current
             let now = Date()
-            let components = calendar.dateComponents([.hour, .minute, .second], from: date, to: now)
+            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date, to: now)
 
-            if let hours = components.hour, hours > 0 {
+            if let years = components.year, years > 0 {
+                return "\(years) year\(years > 1 ? "s" : "") ago"
+            } else if let months = components.month, months > 0 {
+                return "\(months) month\(months > 1 ? "s" : "") ago"
+            } else if let days = components.day, days > 0 {
+                return "\(days) day\(days > 1 ? "s" : "") ago"
+            } else if let hours = components.hour, hours > 0 {
                 return "\(hours) hour\(hours > 1 ? "s" : "") ago"
             } else if let minutes = components.minute, minutes > 0 {
                 return "\(minutes) minute\(minutes > 1 ? "s" : "") ago"
@@ -37,8 +43,9 @@ class GlobalFunctions {
             }
         }
 
-        return "N/A" 
+        return "N/A"
     }
+
   
     
     

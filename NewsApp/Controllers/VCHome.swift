@@ -5,7 +5,7 @@ class VCHome: UIViewController, UITextFieldDelegate, UIPopoverPresentationContro
 
     @IBOutlet weak var tblViewNewsList: UITableView!
     @IBOutlet weak var txtSearch: UITextField!
-    @IBOutlet weak var loader: UIActivityIndicatorView! // Add the UIActivityIndicatorView
+    @IBOutlet weak var loader: UIActivityIndicatorView! 
 
     var newsResponse: NewsResponse?
     var refreshControl = UIRefreshControl()
@@ -38,6 +38,7 @@ class VCHome: UIViewController, UITextFieldDelegate, UIPopoverPresentationContro
         refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
         tblViewNewsList.refreshControl = refreshControl
         txtSearch.addTarget(self, action: #selector(searchTextChanged), for: .editingChanged)
+        
     }
 
     @objc private func goBack() {
@@ -88,7 +89,7 @@ class VCHome: UIViewController, UITextFieldDelegate, UIPopoverPresentationContro
     }
 
     @objc private func refreshData(_ sender: UIRefreshControl) {
-        // Perform the refresh action here (e.g., reload the news)
+        // Perform the refresh action here
         currentPage = 1 // Reset to the first page when refreshing
         pageSize = 20 // Reset pageSize
         hasMoreData = true // Reset hasMoreData
@@ -165,14 +166,18 @@ extension VCHome: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.homeCell, for: indexPath) as? TVCHomeCell,
-              let article = newsResponse?.articles?[indexPath.row] else {
+        guard let newsResponse = newsResponse,
+              let articles = newsResponse.articles,
+              indexPath.row < articles.count,
+              let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.homeCell, for: indexPath) as? TVCHomeCell else {
             return UITableViewCell()
         }
 
+        let article = articles[indexPath.row]
         configureCell(cell, with: article)
         return cell
     }
+
     
     func configureCell(_ cell: TVCHomeCell, with article: Article) {
         cell.lblHeader.text = article.title
